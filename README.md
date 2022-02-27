@@ -8,11 +8,11 @@ Este repositporio contém os trabalhos do grupo **Loucos da Computação** para 
 
 - [Augusto Vinicius da Silva](https://github.com/Vinicius999)
 
-- [Francisco Ricardo dos Santos Silva](https://www.omfgdogs.com/#) 
+- [Francisco Ricardo dos Santos Silva](https://github.com/ricardos7) 
 
 - [José Guilherme Duarte Abrantes](https://github.com/GuiDuarte07) 
 
-- [Reiryson Thiago da Costa](https://www.youtube.com/watch?v=crnycclafuk)
+- [Reiryson Thiago da Costa](https://github.com/reirysson)
 
   
 

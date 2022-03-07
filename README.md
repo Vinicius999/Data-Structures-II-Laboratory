@@ -1,4 +1,4 @@
-<center> <h1>  &#128187; Laboratório de Estruturas de Dados II </h1></center>
+<h1 align="center">  &#128187; Laboratório de Estruturas de Dados II </h1>
 
 <p align="center">Este repositório contém os projetos do grupo <strong>Loucos da Computação</strong> para a disciplina de Laboratório de Estruturas de Dados II do curso Engenharia da Computação - UFERSA.<p>
 <p align="center">
@@ -6,10 +6,7 @@
     <a href="##Tecnologias">Tecnologias</a> |
     <a href="##Projetos">Projetos</a> 
 </p>
-
-<br>
-
-<h4 align="center"> &#128679; Projeto &#128137 em construção... &#128679; </h4>
+<h4 align="center"> &#128679; Projeto &#128640; em construção... &#128679; </h4>
 
  ## Autores
 
@@ -34,8 +31,5 @@
 
 ## Projetos
 
-<ul>
-	<li>UNIDADE I</li>  
-    <li>UNIDADE II</li> 
-    <li>UNIDADE III</li> 
-</ul>
+<h4 align="center"> &#128679; Em construção... &#128679; </h4>
+

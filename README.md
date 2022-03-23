@@ -12,7 +12,7 @@
 
 - [Augusto Vinicius da Silva](https://github.com/Vinicius999)
 
-- [Francisco Ricardo dos Santos Silva](https://github.com/ricardos7) 
+- [Francisco Ricardo dos Santos Silva](https://github.com/Ricardo-SS) 
 
 - [José Guilherme Duarte Abrantes](https://github.com/GuiDuarte07) 
 

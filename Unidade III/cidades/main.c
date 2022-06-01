@@ -82,7 +82,7 @@ void rotas(double *graph) {
     }
 
     printf("\n Distância total:\n > %f\n", sum);
-    printf("\n Cidades visitadas para percorrer 80%% do tour:\n > %d\n", count);
+    printf("\n Cidades visitadas para percorrer 80%% do tour:\n > %d\n\n", count);
 
     fclose(f);
 }
@@ -91,7 +91,7 @@ double maxPercurso(double *graph) {
     double maior = 0.0;
     for(int i = 0; i < N; i++){
         for(int j = i+1; j < N; j++){
-            if(graph[i*N + j]>maior){
+            if(graph[i*N + j] > maior){
                 maior = graph[i*N + j];
             }
         }

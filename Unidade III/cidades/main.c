@@ -1,16 +1,20 @@
-#include<stdlib.h>
 #include<stdio.h>
+#include<stdlib.h>
 #include<math.h>
 
 #define N 9152
 
-void rotas(double *graph);
+// ============================================
+// Prótótipos das funções
+void routes(double *graph);
 double maxPercurso(double *graph);
 double minPercurso(double *graph);
 double medPercurso(double *graph);
 double distance(double latit_i, double longit_i, double latit_j, double longit_j);
+// double repCity(double *graph);
 
-
+// ============================================
+// Main
 int main() {
     FILE *file = fopen("ar9152.tsp", "r");
     int c;
@@ -19,7 +23,7 @@ int main() {
     double cid_la[N];
     double cid_lg[N];
 
-    /*Inicializa graph*/
+    // Initializing graph
     double *graph;
     graph = (double*) malloc(N*N*sizeof(double));
     for (int i = 0; i < N; i++)
@@ -50,23 +54,26 @@ int main() {
     printf("\n Menor distancia entre duas cidades:\n > %f\n", minPercurso(graph));
     printf("\n Distancia média entre duas cidades:\n > %f\n", medPercurso(graph));
     
-    rotas(graph);
+    routes(graph);
 }
 
 
-void rotas(double *graph) {
+// ============================================
+// Implementações das funções
+
+void routes(double *graph) {
     FILE *f = fopen("tourar9152.tour", "r");
     int a, b, count=1;
     double sum = 0.0;
     fscanf(f, "%d", &a);
     fscanf(f, "%d", &b);
     if(a > b){
-        sum = sum + graph[b*N+a];
+        sum = sum + graph[b*N + a];
     }else{
-        sum = sum + graph[a*N+b];
+        sum = sum + graph[a*N + b];
     }
     while (!feof(f)) {
-        //printf("Rotas %d %d\n", a, b);
+        //printf("routes %d %d\n", a, b);
         a = b;
         fscanf(f, "%d", &b);
 
@@ -103,13 +110,27 @@ double minPercurso(double *graph) {
     double menor = graph[0*N + 1];
     for(int i = 0; i < N; i++){
         for(int j = i+1; j < N; j++){
-            if(graph[i*N + j]<menor && graph[i*N + j] != 0.0){
+            if(graph[i*N + j] < menor && graph[i*N + j] != 0.0){
                 menor = graph[i*N + j];
             }
         }
     }
     return menor;
 }
+
+/*
+double repCity(double *graph) {
+    int count = 0;
+    for(int i = 0; i < N; i++){
+        for(int j = i+1; j < N; j++){
+            if(graph[i*N + j] < menor && graph[i*N + j] != 0.0){
+                menor = graph[i*N + j];
+            }
+        }
+    }
+    return menor;
+}
+*/
 
 double medPercurso(double *graph) {
     int count = 0;

@@ -11,7 +11,7 @@ double maxPercurso(double *graph);
 double minPercurso(double *graph);
 double medPercurso(double *graph);
 double distance(double latit_i, double longit_i, double latit_j, double longit_j);
-// double repCity(double *graph);
+int repCity(double *graph);
 
 // ============================================
 // Main
@@ -52,6 +52,7 @@ int main() {
     
     printf("\n Maior distancia entre duas cidades:\n > %f\n", maxPercurso(graph));
     printf("\n Menor distancia entre duas cidades:\n > %f\n", minPercurso(graph));
+    printf("\n Número de cidades repetidas:\n > %d\n", repCity(graph));
     printf("\n Distancia média entre duas cidades:\n > %f\n", medPercurso(graph));
     
     routes(graph);
@@ -118,19 +119,20 @@ double minPercurso(double *graph) {
     return menor;
 }
 
-/*
-double repCity(double *graph) {
-    int count = 0;
+
+int repCity(double *graph) {
+    double equal = graph[0*N + 1];
+    int count=0;
     for(int i = 0; i < N; i++){
         for(int j = i+1; j < N; j++){
-            if(graph[i*N + j] < menor && graph[i*N + j] != 0.0){
-                menor = graph[i*N + j];
+            if(graph[i*N + j] == 0.0){
+                count++;
             }
         }
     }
-    return menor;
+    return count;
 }
-*/
+
 
 double medPercurso(double *graph) {
     int count = 0;
